@@ -12,6 +12,7 @@ import {
 } from "../styles/Projects.styled";
 import { termContext } from "../Terminal";
 import Usage from "../Usage";
+import { Link } from "../styles/Welcome.styled";
 
 const Projects: React.FC = () => {
   const { arg, history, rerender } = useContext(termContext);
@@ -40,7 +41,9 @@ const Projects: React.FC = () => {
     <div data-testid="projects">
       <ProjectsIntro>
         “Talk is cheap. Show me the code”? I got you. <br />
-        Here are some of my projects you shouldn't misss
+        Here are some of my projects you shouldn't miss. Head over to my{" "}
+        <Link href="https://github.com/shxntanu">GitHub</Link> to view more of
+        my projects!
       </ProjectsIntro>
       {projects.map(({ id, title, desc }) => (
         <ProjectContainer key={id}>
@@ -56,27 +59,27 @@ const Projects: React.FC = () => {
 const projects = [
   {
     id: 1,
-    title: "Sat Naing's Blog",
-    desc: "My personal blog where I can write down my thoughts and experiences.",
-    url: "https://satnaing.dev/blog/",
+    title: "aerocode",
+    desc: "Code sharing web app without any sign-ups required. Made in Flutter!",
+    url: "https://aero-code.web.app/",
   },
   {
     id: 2,
-    title: "Haru Fashion",
-    desc: "An ecommerce web application where users can browse various products and make purchases.",
-    url: "https://haru-fashion.vercel.app/",
+    title: "PageTalk",
+    desc: "Ask Questions, gain summaries and take notes from any Document using the power of LLMs!",
+    url: "https://github.com/shxntanu/PageTalk",
   },
   {
     id: 3,
-    title: "Haru API",
-    desc: "A RESTful API developed for the Haru fashion ecommerce project.",
-    url: "https://satnaing.github.io/haru-api/",
+    title: "Email Classifier",
+    desc: "Email Classification and Rapid Automatic Re-routing with the power of LLMs and Distributed Task Queues. (🏆 Winner at Barclays Hack-O-Hire 2024)",
+    url: "https://github.com/shxntanu/email-classifier",
   },
   {
     id: 4,
-    title: "AstroPaper Blog Theme",
-    desc: "A minimal, accessible and SEO-friendly Astro blog theme.",
-    url: "https://astro-paper.pages.dev/",
+    title: "Minima-List",
+    desc: "Get music recommendations based on the song that's currently occupying your mind!",
+    url: "https://github.com/shxntanu/minima-list-ML",
   },
 ];
 
